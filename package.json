@@ -1,19 +1,17 @@
 {
-  "name": "frontend-test-minimal",
+  "name": "storm-frontend-test",
   "version": "0.1.0",
-  "description": "",
+  "description": "https://careers.stormid.com/jobs",
   "author": "stormid",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stormid/frontend-test-minimal.git"
+    "url": "https://github.com/stormid/storm-frontend-test.git"
   },
-  "bugs": {
-    "url": "https://github.com/stormid/frontend-test-minimal/issues"
-  },
-  "main": "index.js",
   "keywords": [
-    "stormid"
+    "stormid",
+    "frontend",
+    "test"
   ],
   "scripts": {
     "api": "node api",
@@ -30,6 +28,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/preset-env": "^7.3.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.4",
