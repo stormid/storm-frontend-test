@@ -2,11 +2,9 @@ import Vue from 'vue/dist/vue.common.js';
 import axios from 'axios';
 
 let template =
-/*html*/`<li>{{ $data.title }}</li>`;
+/*html*/`<li>{{ title }}</li>`;
 
 export let Task = {
-	data: {
-		title: 'test'
-	},
+	props: ['title'],
 	template: template,
 };

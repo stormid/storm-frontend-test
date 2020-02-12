@@ -3,12 +3,17 @@ import axios from 'axios';
 
 import { Task } from '../task/task.js';
 
-let template =
-/*html*/`<ul></ul>`;
+let template =/*html*/`
+		<ul>
+			<Task v-for="task in this.tasks" :title="task.title"/>
+		</ul>
+`;
 
 export let ToDo = {
-	data: {
-		tasks: []
+	data: function() {
+		return {
+			tasks: []
+		}
 	},
 	mounted () {
 		axios
