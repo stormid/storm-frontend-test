@@ -12,9 +12,6 @@ new Vue({
 	components: {
 		ToDo
 	},
-	data: {
-		message: 'Hello Vue!'
-	},
 	template: '<ToDo />',
 	methods: {
 		
