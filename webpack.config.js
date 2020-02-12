@@ -9,7 +9,12 @@ module.exports = {
   	output: {
 		filename: 'app.js',
 		path: path.resolve(__dirname, './build')
-  	},
+	  },
+	resolve: {
+		alias: {
+		  'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
+		}
+	},
   	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		new CleanWebpackPlugin(['./build']),
@@ -21,14 +26,14 @@ module.exports = {
 	],
   	module: {
 		rules: [{
-            test: /\.scss$/,
-            use: [
-                "style-loader",
-                "css-loader",
-                "sass-loader"
-            ]
-        },
-        {
+			test: /\.scss$/,
+			use: [
+				"style-loader",
+				"css-loader",
+				"sass-loader"
+			]
+		},
+		{
 			test: /\.js$/,
 			exclude: /(node_modules|bower_components)/,
 			use: {
